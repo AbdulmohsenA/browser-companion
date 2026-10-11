@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sarjy setup</title>
+<style>
+  :root { --bg: #f6f7fb; --card: #fff; --fg: #1a1d29; --muted: #5b6275; --line: #e3e6ef; --accent: #4f46e5; --ok: #059669; --bad: #dc2626; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #12141b; --card: #1b1e28; --fg: #eef0f6; --muted: #9aa3b8; --line: #2b2f3c; --accent: #6366f1; --ok: #34d399; --bad: #f87171; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 640px; margin: 48px auto; padding: 0 16px; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  .lead { color: var(--muted); margin: 0 0 24px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; }
+  .card h2 { font-size: 16px; margin: 0 0 6px; display: flex; align-items: center; gap: 10px; }
+  .card p { margin: 0 0 12px; color: var(--muted); }
+  .n { width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; font-size: 13px; flex: none; }
+  button { font: inherit; font-weight: 600; padding: 9px 16px; border-radius: 10px; border: 0; background: var(--accent); color: #fff; cursor: pointer; }
+  button.secondary { background: transparent; color: var(--fg); border: 1px solid var(--line); }
+  input { font: inherit; width: 100%; padding: 9px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); margin-bottom: 10px; }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .result { font-size: 14px; }
+  .result.ok { color: var(--ok); } .result.bad { color: var(--bad); }
+  code { font-size: 13px; background: var(--bg); padding: 1px 6px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Sarjy</h1>
+  <p class="lead">The browser companion to assist your usage</p>
+
+  <section class="card">
+    <h2><span class="n">1</span> Allow the microphone</h2>
+    <p>Allow microphone access to enable voice commands.</p>
+    <div class="row"><button id="mic">Allow microphone</button><span id="micResult" class="result"></span></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="n">2</span> Check the agent service</h2>
+    <p>Verify that the agent service is accessible and properly configured with the Access Key.</p>
+    <input id="tokenUrl" spellcheck="false" aria-label="Agent Service URL">
+    <input id="accessKey" type="password" spellcheck="false" placeholder="Access key (Cloudflare service)" aria-label="Access key">
+    <div class="row"><button id="check" class="secondary">Check connection</button><span id="checkResult" class="result"></span></div>
+  </section>
+
+  <section class="card">
+    <h2><span class="n">✓</span> Use it</h2>
+    <p>Pin the extension (puzzle icon in the toolbar), then click Sarjy's toolbar button to start talking. Clippy
+       appears in the top-left corner of the page; click him to show or hide the conversation. Click the toolbar
+       button again to end the call.</p>
+    <button id="done" class="secondary">Close this tab</button>
+  </section>
+</main>
+<script src="config.js"></script>
+<script src="setup.js"></script>
+</body>
+</html>
