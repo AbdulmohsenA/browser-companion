@@ -1,10 +1,22 @@
 ## Browser-Companion
-A full voice assistant that lives in your browser that can control and navigate for you. Uses LiveKit platform and claude browser tools toolset
+A full voice assistant that lives in your browser and can control and navigate for you. Uses LiveKit platform and claude browser toolset for optimal navigation and realtime experience.
+
+### Features
+- Realtime voice conversation experience using `LiveKit` framework
+- Seamless navigation experience by voice commands
+- Nostalgic look (Clippy is Back!)
+
+### Basic Diagram
+<img width="2416" height="450" alt="Architecture-Starter" src="https://github.com/user-attachments/assets/a9d0eab1-2bc3-4d94-b4c8-d9dd8f67c052" />
 
 ## Setup
 Needs a Chromium-based browser
 
 1. **Load the extension.**: Open `chrome://extensions`, turn on Developer mode, click **Load unpacked**, and pick the `extension` folder in this repo.
+
+<img width="1921" height="193" alt="Screenshot 2026-10-11 083006" src="https://github.com/user-attachments/assets/cda155fb-0ebc-4bc2-b667-8140cdea3dac" />
+
+
 2. **Finish the setup page** (it opens on install; or right-click the extension icon → Options):
    - Click **Allow microphone**.
    - Set the service URL and Access Token to whatever is required and check connection.
