@@ -1,3 +1,6 @@
+## Browser-Companion
+A full voice assistant that lives in your browser that can control and navigate for you. Uses LiveKit platform and claude browser tools toolset
+
 ## Setup
 Needs a Chromium-based browser
 
