@@ -27,6 +27,7 @@ Needs a Chromium-based browser
 Performance:
 - Classify when the tone actually indicates an end of sentence, not just by time
 - Preemptive generation and seperate thread for actions
+- [Qwen-Audio-Jev](https://arxiv.org/html/2610.21614v1), assumes 20x speed in output. Must try
 - Dissect inference pipeline to explore more optimizations
 
 Usability:
