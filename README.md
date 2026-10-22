@@ -35,3 +35,4 @@ Usability:
 - Extend the functionality to phones
 - GUI Grounding models incorporation
 - Extend usage to computer-use, not just browser
+- Add "Assistant Mouse cursor" To showcase what the model is doing right now. Similar to dual cursors in Figma or other collaborative sites
